@@ -43,4 +43,4 @@ console.log('Server is running on port 3000');
 });
 ```
 
-2. Update the `user-registration.js` file to fetch the user data after successful registration:
+2. Update the `user.js` file to fetch the user data after successful registration:

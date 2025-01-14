@@ -11,50 +11,38 @@ document.querySelectorAll('nav a').forEach(anchor => {
   });
 });
 
+// user.js
+const mysql = require('mysql');
 
-const express = require('express');
-const app = express();
-
-// Middleware to parse form data
-app.use(express.urlendoded({ extended: true }));
-
-// API endpoint to register a user
-app.post('/api/register-user', (req, res) => {
-// Get the form data from the request body
-const { name, studentId, program, age, idCard } = req.body;
-
-// Validate the data (e.g., check for duplicates, format, etc.)
-// ...
-
-// Store the user data in the database
-// ...
-
-// Return the registered user data
-res.json({
-  name,
-  studentId,
-  program,
-  age
-});
+// Create a connection to the MySQL database
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'your_username',
+  password: 'your_password',
+  database: 'your_database'
 });
 
-// API endpoint to fetch a user
-app.get('/api/get-user', (req, res) => {
-// Fetch the user data from the database based on the ID card
-const userData = {
-  name: 'John Doe',
-  studentId: '12345',
-  program: 'Computer Science',
-  age: 20
-};
+// Get the form element
+const form = document.getElementById('user-registration-form');
 
-// Return the user data
-res.json(userData);
+// Add an event listener to the form's submit event
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the form data
+  const name = document.getElementById('name').value;
+  const studentId = document.getElementById('student-id').value;
+  const program = document.getElementById('program').value;
+  const age = document.getElementById('age').value;
+  const idCard = document.getElementById('id-card').value;
+
+  // Insert the data into the database
+  connection.query(
+    'INSERT INTO users (name, student_id, program, age, id_card) VALUES (?, ?, ?, ?, ?)',
+    [name, studentId, program, age, idCard],
+    (error, results, fields) => {
+      if (error) throw error;
+      console.log('User registered successfully!');
+    }
+  );
 });
-
-app.listen(3000, () => {
-console.log('Server is running on port 3000');
-});
-```
-
-2. Update the `user.js` file to fetch the user data after successful registration:

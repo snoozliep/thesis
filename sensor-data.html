@@ -8,11 +8,47 @@
 <header>
   <h1>First Aid Kit IoT</h1>
 </header>
+
 <nav>
-  <a href="thesis.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="sensor-data.html">Sensor Data</a>
-  <a href="user.html">User Registration</a>
+  <div class="dropdown">
+      <button class="dropbtn" onclick="location.href='thesis.html'">Home</button>
+      <a href="thesis.html"></a>
+      <div class="dropdown-content">
+          <a href="#articles">Articles</a>
+          <a href="#concerns">Book an Appointment</a>
+          <a href="#contact">Contact Details</a>
+          <a href="#Schedules">Articles</a>
+
+      </div>
+  </div>
+  <div class="dropdown">
+      <button class="dropbtn" onclick="location.href='about.html'">About</button>
+      <div class="dropdown-content">
+          <a href="about.html">About</a>
+          <a href="#testimonials">Members</a>
+          <a href="#faq">FAQ</a>
+      </div>
+  </div>
+  <div class="dropdown">
+      <button class="dropbtn"onclick="location.href='sensor-data.html'">Statistics</button>
+      <div class="dropdown-content">
+          <a href="sensor-data.html">Statistics</a>
+      </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn"onclick="location.href='method.html'">Method</button>
+    <div class="dropdown-content">
+        <a href="method.html">Statistics</a>
+    </div>
+    </div>
+
+  <div class="dropdown">
+      <button class="dropbtn" onclick="location.href='user.html'">User Registration</button>
+      <div class="dropdown-content">
+          <a href="user.html">Register</a>
+      </div>
+  </div>
 </nav>
 
 <main>
@@ -47,6 +83,6 @@
 <footer>
   <p>&copy; 2023 First Aid Kit IoT. All rights reserved.</p>
 </footer>
-<script src="js/sensor-data.js"></script>
+<script src="sensor-data.js"></script>
 </body>
 </html>

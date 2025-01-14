@@ -8,11 +8,47 @@
 <header>
   <h1>First Aid Kit IoT</h1>
 </header>
+
 <nav>
-  <a href="thesis.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="sensor-data.html">Sensor Data</a>
-  <a href="user.html">User Registration</a>
+  <div class="dropdown">
+      <button class="dropbtn" onclick="location.href='thesis.html'">Home</button>
+      <a href="thesis.html"></a>
+      <div class="dropdown-content">
+          <a href="#articles">Articles</a>
+          <a href="#concerns">Book an Appointment</a>
+          <a href="#contact">Contact Details</a>
+          <a href="#Schedules">Articles</a>
+
+      </div>
+  </div>
+  <div class="dropdown">
+      <button class="dropbtn" onclick="location.href='about.html'">About</button>
+      <div class="dropdown-content">
+          <a href="about.html">About</a>
+          <a href="about.html#testimonials">Members</a>
+          <a href="#faq">FAQ</a>
+      </div>
+  </div>
+  <div class="dropdown">
+      <button class="dropbtn"onclick="location.href='sensor-data.html'">Statistics</button>
+      <div class="dropdown-content">
+          <a href="sensor-data.html">Statistics</a>
+      </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn"onclick="location.href='sensor-data.html'">Method</button>
+    <div class="dropdown-content">
+        <a href="method.html">Statistics</a>
+    </div>
+    </div>
+
+  <div class="dropdown">
+      <button class="dropbtn" onclick="location.href='user.html'">User Registration</button>
+      <div class="dropdown-content">
+          <a href="user.html">Register</a>
+      </div>
+  </div>
 </nav>
 
 <section class="landing-page">
@@ -22,8 +58,18 @@
     <a href="#" class="cta-button">Learn More</a>
 
   </div>
-
 </section>
+
+<!-- <section>
+  <div class="container-concern">
+    <div class="card-concern" onclick="selectAppointment(this, 'Walk-in')">
+      <h3>Walk-in</h3>
+    </div>
+    <div class="card-concern" onclick="selectAppointment(this, 'Online')">
+      <h3>Online</h3>
+    </div>
+  </div>
+</section> -->
 
 <section class="services">
   <div class="container">
@@ -46,6 +92,7 @@
 </section>
 
 
+
 <!-- 
 <main>
   <h2>Welcome to the First Aid Kit IoT Project</h2>
@@ -66,7 +113,7 @@
 
 <section class="articles" id="articles">
 
-  <h1>Articles</h1>
+  <h2>Articles</h2>
 
 <div class="container">
     <div class="card">
@@ -123,11 +170,146 @@
 </div>
 </section>
 
+<section class="concerns" id="concerns">
+  <div class="concerns-form">
+    <h2>Book an Appointment</h2>
+    <form action="/submit-concern" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="concern">Your Concerns:</label>
+        <textarea id="concern" name="concern" rows="4" required></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <!-- <label for="service">Type of Service:</label> -->
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="consultation">Consultation</option>
+            <option value="support">Medical</option>
+            <option value="installation">Dental</option>
+            <option value="maintenance">Mental</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <!-- <label for="appointment-date">Appointment Date:</label> -->
+          <input type="date" id="appointment-date" name="appointment-date" required>
+        </div>
+
+        <div class="form-group">
+          <!-- <label for="appointment-time">Appointment Time:</label> -->
+          <select id="appointment-time" name="appointment-time" required>
+            <option value="" disabled selected>Select a time</option>
+            <option value="7:00 am">7:00 am</option>
+            <option value="7:15 am">7:15 am</option>
+            <option value="7:30 am">7:30 am</option>
+            <option value="7:45 am">7:45 am</option>
+            <option value="8:00 am">8:00 am</option>
+            <option value="8:15 am">8:15 am</option>
+            <option value="8:30 am">8:30 am</option>
+            <option value="8:45 am">8:45 am</option>
+            <option value="9:00 am">9:00 am</option>
+            <option value="9:15 am">9:15 am</option>
+            <option value="9:30 am">9:30 am</option>
+            <option value="9:45 am">9:45 am</option>
+            <option value="10:00 am">10:00 am</option>
+            <option value="10:15 am">10:15 am</option>
+            <option value="10:30 am">10:30 am</option>
+            <option value="10:45 am">10:45 am</option>
+            <option value="11:00 am">11:00 am</option>
+            <option value="11:15 am">11:15 am</option>
+            <option value="11:30 am">11:30 am</option>
+            <option value="11:45 am">11:45 am</option>
+            <option value="12:00 pm">12:00 pm</option>
+            <option value="12:15 pm">12:15 pm</option>
+            <option value="12:30 pm">12:30 pm</option>
+            <option value="12:45 pm">12:45 pm</option>
+            <option value="1:00 pm">1:00 pm</option>
+            <option value="1:15 pm">1:15 pm</option>
+            <option value="1:30 pm">1:30 pm</option>
+            <option value="1:45 pm">1:45 pm</option>
+            <option value="2:00 pm">2:00 pm</option>
+            <option value="2:15 pm">2:15 pm</option>
+            <option value="2:30 pm">2:30 pm</option>
+            <option value="2:45 pm">2:45 pm</option>
+            <option value="3:00 pm">3:00 pm</option>
+            <option value="3:15 pm">3:15 pm</option>
+            <option value="3:30 pm">3:30 pm</option>
+            <option value="3:45 pm">3:45 pm</option>
+            <option value="4:00 pm">4:00 pm</option>
+            <option value="4:15 pm">4:15 pm</option>
+            <option value="4:30 pm">4:30 pm</option>
+            <option value="4:45 pm">4:45 pm</option>
+            <option value="5:00 pm">5:00 pm</option>
+            <option value="5:15 pm">5:15 pm</option>
+            <option value="5:30 pm">5:30 pm</option>
+            <option value="5:45 pm">5:45 pm</option>
+            <option value="6:00 pm">6:00 pm</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</section>
+
+
+</section>
+
+<section>
+  <div class="contact" id="contact">
+    <div class="contacts">
+    <div class="contact-details">
+        <h1>Contact Details</h1>
+        <p>Room 104 Ground Floor School Building Gen. Douglas McArthur Highway, Matina, Davao City,<br>
+        +63 (998) 595 0024<br>
+        clinic@mcm.edu.ph</p>
+    </div>
+
+    <div class="clinic-hours">
+        <h2>Clinic Hours</h2>
+        <p>Monday - Friday<br>
+        9:00 AM - 6:00 PM</p>
+    </div>
+    </div>
+
+    <div class="schedules">
+        <div class="personnel">
+            <h3>Schedule of Physician</h3>
+            <p>Dr. Jean A. Sayman<br>
+            9:00 AM - 2:00 PM</p>
+        </div>
+
+        <div class="personnel">
+            <h3>Schedule of Dentist</h3>
+            <p>Dr. Suzanne Noreen D. De Lima<br>
+            *By appointment only.</p>
+        </div>
+
+        <div class="personnel">
+            <h3>Schedule of Nurse</h3>
+            <p>Ma. Anabel L. Castañeda, RN<br>
+            10:00 AM - 6:00 PM</p>
+        </div>
+    </div>
+</div>
+
+</section>
 
 
 <footer>
   <p>&copy; 2023 First Aid Kit IoT. All rights reserved.</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>

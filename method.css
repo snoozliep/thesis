@@ -401,6 +401,7 @@ margin: auto;
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
+  -webkit-user-select: none; /* Safari */
   user-select: none;
   margin-left: 200px;
   margin-right: 200px;

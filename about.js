@@ -1,3 +1,5 @@
+//FAQ
+
 function toggleFAQ(button) {
     const faq = button.parentElement;
     faq.classList.toggle("active");
@@ -13,6 +15,8 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+//Gallery
 
 const images = [
     "img/cerv.webp",
@@ -36,6 +40,9 @@ const images = [
     "img/smog.webp",
     "img/smoke.png"
 ];
+
+// NAV
+
 let currentIndex = 0;
 
 function openModal(index) {

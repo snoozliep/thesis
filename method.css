@@ -45,6 +45,7 @@ main h2 {
   margin-right: 180px;
 }
 
+
 /* Navigation */
 nav {
   background-color: #ebebeb;
@@ -55,7 +56,7 @@ nav {
   gap: 80px;
 }
 
-nav .dropdown {
+.nav .dropdown {
   position: relative;
 }
 
@@ -84,7 +85,7 @@ nav a {
 }
 
 .dropdown-content {
-  display: none;
+  display: none; /* Hide dropdown by default */
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -215,7 +216,7 @@ footer {
 .faq-section {
   max-width: 1100px;
   margin: 50px auto 100px;
-  text-align: center;
+  text-align: left;
 }
 
 .faq {
@@ -255,6 +256,11 @@ footer {
 
 .faq h2 {
   text-align: right;
+}
+
+.faq h1 {
+  text-align: left;
+  margin-left: 40px;
 }
 
 .faq table {
@@ -490,3 +496,72 @@ tr:hover {
   width: 100%;
   margin-top: 30px;
 }
+
+/* Articles */
+.articles-tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-tool {
+  display: flex;
+  width: 1100px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 1px 0 10px;
+}
+
+.card-tool {
+  margin: 1px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-body-tool {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-height: 150px;
+  flex-grow: 1;
+}
+
+.card-body-tool p {
+  font-size: 10px;
+  margin: 5px 20px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.card-body-tool h4 {
+  font-size: 18px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.card-tool img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  align-self: center;
+  margin-bottom: 1px;
+}
+
+.equation { text-align: center; margin: 20px 0; }
+

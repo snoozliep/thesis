@@ -9,7 +9,12 @@
         "methods/6.webp",
         "methods/7.webp",
         "methods/8.webp",
-        "methods/9.webp"
+        "methods/9.webp",
+        // "methods/10.webp",
+        "methods/11.webp",
+        "methods/12.webp",
+        "methods/13.webp",
+        "methods/14.jpg"
     ];
 
 // NAV
@@ -48,3 +53,5 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+document.querySelectorAll('.read-more-btn').forEach(btn => { btn.addEventListener('click', () => { const cardText = btn.previousElementSibling.querySelector('.read-more-text'); cardText.style.display = 'inline'; btn.style.display = 'none'; }); });

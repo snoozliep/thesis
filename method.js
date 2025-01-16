@@ -15,6 +15,8 @@
         "methods/12.webp",
         "methods/13.webp",
         "methods/14.jpg"
+        "methods/15.png"
+
     ];
 
 // NAV

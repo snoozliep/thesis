@@ -1,3 +1,23 @@
+    //FAQ
+
+    function toggleFAQ(button) {
+        const faq = button.parentElement;
+        faq.classList.toggle("active");
+    }
+    
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    document.querySelectorAll('.read-more-btn').forEach(btn => { btn.addEventListener('click', () => { const cardText = btn.previousElementSibling.querySelector('.read-more-text'); cardText.style.display = 'inline'; btn.style.display = 'none'; }); });
+
 // GALLERY 
 
     const images = [
@@ -13,9 +33,9 @@
         // "methods/10.webp",
         "methods/11.webp",
         "methods/12.webp",
-        "methods/13.webp",
-        "methods/14.jpg"
-        "methods/15.png"
+        // "methods/13.webp",
+        "methods/14.jpg",
+        "methods/15.png",
 
     ];
 
@@ -38,22 +58,3 @@
         document.getElementById("myModal").style.display = "none";
     }
 
-    //FAQ
-
-function toggleFAQ(button) {
-    const faq = button.parentElement;
-    faq.classList.toggle("active");
-}
-
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-document.querySelectorAll('.read-more-btn').forEach(btn => { btn.addEventListener('click', () => { const cardText = btn.previousElementSibling.querySelector('.read-more-text'); cardText.style.display = 'inline'; btn.style.display = 'none'; }); });

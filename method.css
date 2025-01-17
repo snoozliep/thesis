@@ -565,3 +565,10 @@ tr:hover {
 
 .equation { text-align: center; margin: 20px 0; }
 
+.figma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
